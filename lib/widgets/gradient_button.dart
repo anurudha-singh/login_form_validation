@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:login_form_validation/pallete.dart';
 
 class GradientButton extends StatelessWidget {
+  // Comments added in the gradient file that describes how we can create wonderful buttons in flutter
   final VoidCallback onPressed;
-  const GradientButton({
-    Key? key,
-    required this.onPressed,
-  }) : super(key: key);
+  String title;
+  GradientButton({Key? key, required this.onPressed, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +30,8 @@ class GradientButton extends StatelessWidget {
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
         ),
-        child: const Text(
-          'Sign in',
+        child: Text(
+          title,
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 17,

@@ -35,6 +35,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text((state as AuthSuccess).uid),
                 GradientButton(
+                  title: 'LogOut',
                   onPressed: () {
                     context.read<AuthBloc>().add(AuthLogoutRequested());
                   },
